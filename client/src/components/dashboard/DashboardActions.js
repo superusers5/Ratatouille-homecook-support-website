@@ -5,14 +5,14 @@ const DashboardActions = () => {
   return (
     <div className='dash-buttons'>
       <Link to='/edit-profile' className='btn btn-light'>
-        <i className='fas fa-user-circle text-primary' /> Edit Profile
+        <i className='fas fa-user-circle text-primary' /> Edit Shop Info
       </Link>
       <Link to='/add-experience' className='btn btn-light'>
-        <i className='fab fa-black-tie text-primary' /> Add Experience
+        <i className='fab fa-black-tie text-primary' /> Add Dishes
       </Link>
-      <Link to='/add-education' className='btn btn-light'>
+      {/* <Link to='/add-education' className='btn btn-light'>
         <i className='fas fa-graduation-cap text-primary' /> Add Education
-      </Link>
+      </Link> */}
     </div>
   );
 };

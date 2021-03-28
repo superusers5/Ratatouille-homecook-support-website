@@ -160,8 +160,8 @@ router.delete('/', auth, async (req, res) => {
 router.put(
   '/experience',
   auth,
-  check('title', 'Title is required').notEmpty(),
-  check('company', 'Company is required').notEmpty(),
+  check('title', 'Dish Name is required').notEmpty(),
+  check('company', 'Cuisine is required').notEmpty(),
   check('from', 'From date is required and needs to be from the past')
     .notEmpty()
     .custom((value, { req }) => (req.body.to ? value < req.body.to : true)),

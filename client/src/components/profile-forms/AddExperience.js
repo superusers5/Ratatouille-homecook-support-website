@@ -9,9 +9,9 @@ const AddExperience = ({ addExperience, history }) => {
     company: '',
     title: '',
     location: '',
-    from: '',
+    from: '10',
     to: '',
-    current: false,
+    current: true,
     description: ''
   });
 
@@ -22,10 +22,9 @@ const AddExperience = ({ addExperience, history }) => {
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Add An Experience</h1>
+      <h1 className="large text-primary">Add a Dish</h1>
       <p className="lead">
-        <i className="fas fa-code-branch" /> Add any developer/programming
-        positions that you have had in the past
+      <i class="fas fa-hamburger"></i> Start with a dish that is special to you!
       </p>
       <small>* = required field</small>
       <form
@@ -38,7 +37,7 @@ const AddExperience = ({ addExperience, history }) => {
         <div className="form-group">
           <input
             type="text"
-            placeholder="* Job Title"
+            placeholder="* Dish Name"
             name="title"
             value={title}
             onChange={onChange}
@@ -48,7 +47,7 @@ const AddExperience = ({ addExperience, history }) => {
         <div className="form-group">
           <input
             type="text"
-            placeholder="* Company"
+            placeholder="* Cuisine (example: Chinese, Indian)"
             name="company"
             value={company}
             onChange={onChange}
@@ -58,17 +57,17 @@ const AddExperience = ({ addExperience, history }) => {
         <div className="form-group">
           <input
             type="text"
-            placeholder="Location"
+            placeholder="Price (INR)"
             name="location"
             value={location}
             onChange={onChange}
           />
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
           <h4>From Date</h4>
           <input type="date" name="from" value={from} onChange={onChange} />
-        </div>
-        <div className="form-group">
+        </div> */}
+        {/* <div className="form-group">
           <p>
             <input
               type="checkbox"
@@ -91,13 +90,13 @@ const AddExperience = ({ addExperience, history }) => {
             onChange={onChange}
             disabled={current}
           />
-        </div>
+        </div> */}
         <div className="form-group">
           <textarea
             name="description"
             cols="30"
             rows="5"
-            placeholder="Job Description"
+            placeholder="About Dish"
             value={description}
             onChange={onChange}
           />

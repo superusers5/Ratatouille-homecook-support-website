@@ -51,7 +51,7 @@ const ProfileForm = ({
     location,
     status,
     skills,
-    githubusername,
+    // githubusername,
     bio,
     twitter,
     facebook,
@@ -79,11 +79,11 @@ const ProfileForm = ({
         <div className="form-group">
           <select name="status" value={status} onChange={onChange}>
             <option>* Select Experience</option>
-            <option value="Developer">NookCook (0-1 years)</option>
-            <option value="Junior Developer">AmaCook (1-3 years)</option>
-            <option value="Senior Developer">GGCook (3-6 years)</option>
-            <option value="Manager">LegenCook (6-10 years)</option>
-            <option value="Student or Learning">MomCook (10+ years)</option>
+            <option value="NookCook">NookCook (0-1 years)</option>
+            <option value="AmaCook">AmaCook (1-3 years)</option>
+            <option value="GGCook">GGCook (3-6 years)</option>
+            <option value="LegenCook">LegenCook (6-10 years)</option>
+            <option value="MomCook">MomCook (10+ years)</option>
           </select>
           <small className="form-text">
             Give us an idea of how well you can cook
