@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -108,7 +108,6 @@ const Login = ({ login, isAuthenticated }) => {
             autoComplete="email"
             value={email}
             onChange={onChange}
-            required
             autoFocus
           />
           <TextField

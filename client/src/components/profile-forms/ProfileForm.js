@@ -70,38 +70,35 @@ const ProfileForm = ({
 
   return (
     <Fragment>
-      <h1 className="large text-primary">Edit Your Profile</h1>
+      <h1 className="large text-primary">Edit Shop Detaits</h1>
       <p className="lead">
-        <i className="fas fa-user" /> Add some changes to your profile
+        <i className="fas fa-user" /> Tell us something about your shop!
       </p>
       <small>* = required field</small>
       <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
           <select name="status" value={status} onChange={onChange}>
-            <option>* Select Professional Status</option>
-            <option value="Developer">Developer</option>
-            <option value="Junior Developer">Junior Developer</option>
-            <option value="Senior Developer">Senior Developer</option>
-            <option value="Manager">Manager</option>
-            <option value="Student or Learning">Student or Learning</option>
-            <option value="Instructor">Instructor or Teacher</option>
-            <option value="Intern">Intern</option>
-            <option value="Other">Other</option>
+            <option>* Select Experience</option>
+            <option value="Developer">NookCook (0-1 years)</option>
+            <option value="Junior Developer">AmaCook (1-3 years)</option>
+            <option value="Senior Developer">GGCook (3-6 years)</option>
+            <option value="Manager">LegenCook (6-10 years)</option>
+            <option value="Student or Learning">MomCook (10+ years)</option>
           </select>
           <small className="form-text">
-            Give us an idea of where you are at in your career
+            Give us an idea of how well you can cook
           </small>
         </div>
         <div className="form-group">
           <input
             type="text"
-            placeholder="Company"
+            placeholder="Shop Name"
             name="company"
             value={company}
             onChange={onChange}
           />
           <small className="form-text">
-            Could be your own company or one you work for
+            Be creative!
           </small>
         </div>
         <div className="form-group">
@@ -113,7 +110,7 @@ const ProfileForm = ({
             onChange={onChange}
           />
           <small className="form-text">
-            Could be your own or a company website
+            It's okay if you don't have one, we're here!
           </small>
         </div>
         <div className="form-group">
@@ -125,22 +122,22 @@ const ProfileForm = ({
             onChange={onChange}
           />
           <small className="form-text">
-            City & state suggested (eg. Boston, MA)
+            City & state suggested (eg. Hyderabad, Telangana)
           </small>
         </div>
         <div className="form-group">
           <input
             type="text"
-            placeholder="* Skills"
+            placeholder="* Specialities"
             name="skills"
             value={skills}
             onChange={onChange}
           />
           <small className="form-text">
-            Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
+            Please use comma separated values (eg. Vegan, Safe & hygienic, Economic, No contact delivery)
           </small>
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
           <input
             type="text"
             placeholder="Github Username"
@@ -152,7 +149,7 @@ const ProfileForm = ({
             If you want your latest repos and a Github link, include your
             username
           </small>
-        </div>
+        </div> */}
         <div className="form-group">
           <textarea
             placeholder="A short bio of yourself"
@@ -160,7 +157,7 @@ const ProfileForm = ({
             value={bio}
             onChange={onChange}
           />
-          <small className="form-text">Tell us a little about yourself</small>
+          <small className="form-text">Tell your customers a little about yourself</small>
         </div>
 
         <div className="my-2">
