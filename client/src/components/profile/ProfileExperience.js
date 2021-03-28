@@ -6,18 +6,17 @@ const ProfileExperience = ({
   experience: { company, title, location, current, to, from, description }
 }) => (
   <div>
-    <h3 className="text-dark">{company}</h3>
     <p>
-      {formatDate(from)} - {to ? formatDate(to) : 'Now'}
+      <strong>Dish Name: </strong> {title}
     </p>
     <p>
-      <strong>Position: </strong> {title}
+      <strong>Cuisine: </strong> {company}
     </p>
     <p>
-      <strong>Location: </strong> {location}
+      <strong>Price: </strong> {location}
     </p>
     <p>
-      <strong>Description: </strong> {description}
+      <strong>About Dish: </strong> {description}
     </p>
   </div>
 );
