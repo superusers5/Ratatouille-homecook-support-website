@@ -3,8 +3,22 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { deleteExperience } from '../../actions/profile';
 import formatDate from '../../utils/formatDate';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
+
+const useStyles = makeStyles((theme) => ({
+  margin: {
+    margin: theme.spacing(1),
+  },
+  extendedIcon: {
+    marginRight: theme.spacing(1),
+  },
+}));
 
 const Experience = ({ experience, deleteExperience }) => {
+  const classes = useStyles();
   const experiences = experience.map((exp) => (
     <tr key={exp._id}>
       <td>{exp.company}</td>
@@ -14,12 +28,10 @@ const Experience = ({ experience, deleteExperience }) => {
       </td> */}
       <td className="hide-sm">{exp.location}</td>
       <td>
-        <button
-          onClick={() => deleteExperience(exp._id)}
-          className="btn btn-danger"
-        >
-          Delete
-        </button>
+        <IconButton aria-label="delete"  onClick={() => deleteExperience(exp._id)}>
+          <DeleteIcon />
+        </IconButton>
+
       </td>
     </tr>
   ));

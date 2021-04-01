@@ -3,8 +3,26 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addExperience } from '../../actions/profile';
+import { makeStyles } from '@material-ui/core/styles';
+import TextField from '@material-ui/core/TextField';
+import TextareaAutosize from '@material-ui/core/TextareaAutosize';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: '25ch',
+  },
+}));
+
 
 const AddExperience = ({ addExperience, history }) => {
+  const classes = useStyles()
+
   const [formData, setFormData] = useState({
     company: '',
     title: '',
@@ -34,34 +52,57 @@ const AddExperience = ({ addExperience, history }) => {
           addExperience(formData, history);
         }}
       >
-        <div className="form-group">
-          <input
-            type="text"
-            placeholder="* Dish Name"
-            name="title"
-            value={title}
-            onChange={onChange}
-            required
-          />
+        <div>
+          
+        <TextField
+          id="outlined-full-width"
+          style={{ margin: 8 }}
+          placeholder="* Dish Name"
+          name="title"
+          value={title}
+          onChange={onChange}
+          required
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+        />
         </div>
-        <div className="form-group">
-          <input
-            type="text"
-            placeholder="* Cuisine (example: Chinese, Indian)"
-            name="company"
-            value={company}
-            onChange={onChange}
-            required
-          />
+        <div>
+        <TextField
+          id="outlined-full-width"
+          style={{ margin: 8 }}
+          placeholder="* Cuisine (example: Chinese, Indian)"
+          name="company"
+          value={company}
+          onChange={onChange}
+          required
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+        />
         </div>
-        <div className="form-group">
-          <input
-            type="text"
-            placeholder="Price (INR)"
-            name="location"
-            value={location}
-            onChange={onChange}
-          />
+        <div>
+        <TextField
+          id="outlined-full-width"
+          style={{ margin: 8 }}
+          placeholder="Price (INR)"
+          name="location"
+          value={location}
+          onChange={onChange}
+          required
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+        />
         </div>
         {/* <div className="form-group">
           <h4>From Date</h4>
@@ -91,15 +132,23 @@ const AddExperience = ({ addExperience, history }) => {
             disabled={current}
           />
         </div> */}
-        <div className="form-group">
-          <textarea
-            name="description"
-            cols="30"
-            rows="5"
-            placeholder="About Dish"
-            value={description}
-            onChange={onChange}
-          />
+        <div>
+        <TextField
+          id="outlined-full-width"
+          style={{ margin: 8 }}
+          placeholder="About Dish"
+          name="description"
+          value={description}
+          onChange={onChange}
+          required
+          fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          variant="outlined"
+        />
+
         </div>
         <input type="submit" className="btn btn-primary my-1" />
         <Link className="btn btn-light my-1" to="/dashboard">

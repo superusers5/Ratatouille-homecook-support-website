@@ -1,14 +1,24 @@
 import React, { Fragment } from 'react';
 import spinner from './spinner.gif';
+import { makeStyles } from '@material-ui/core/styles';
+import LinearProgress from '@material-ui/core/LinearProgress'
 
-const Spinner = () => (
-  <Fragment>
-    <img
-      src={spinner}
-      style={{ width: '200px', margin: 'auto', display: 'block' }}
-      alt="Loading..."
-    />
-  </Fragment>
-);
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: '100%',
+    '& > * + *': {
+      marginTop: theme.spacing(2),
+    },
+  },
+}));
+ function Spinner() {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <LinearProgress color="secondary" />
+    </div>
+  );
+}
 
 export default Spinner;
