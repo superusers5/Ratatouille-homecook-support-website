@@ -122,7 +122,7 @@ export const addExperience = (formData, history) => async (dispatch) => {
       payload: res.data
     });
 
-    dispatch(setAlert('Experience Added', 'success'));
+    dispatch(setAlert('Dish Added', 'success'));
 
     history.push('/dashboard');
   } catch (err) {
@@ -176,7 +176,7 @@ export const deleteExperience = (id) => async (dispatch) => {
       payload: res.data
     });
 
-    dispatch(setAlert('Experience Removed', 'success'));
+    dispatch(setAlert('Dish Removed', 'success'));
   } catch (err) {
     dispatch({
       type: PROFILE_ERROR,

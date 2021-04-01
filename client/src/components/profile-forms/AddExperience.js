@@ -67,7 +67,7 @@ const AddExperience = ({ addExperience, history }) => {
           InputLabelProps={{
             shrink: true,
           }}
-          variant="outlined"
+          variant="filled"
         />
         </div>
         <div>
@@ -84,7 +84,7 @@ const AddExperience = ({ addExperience, history }) => {
           InputLabelProps={{
             shrink: true,
           }}
-          variant="outlined"
+          variant="filled"
         />
         </div>
         <div>
@@ -101,7 +101,7 @@ const AddExperience = ({ addExperience, history }) => {
           InputLabelProps={{
             shrink: true,
           }}
-          variant="outlined"
+          variant="filled"
         />
         </div>
         {/* <div className="form-group">
@@ -146,7 +146,7 @@ const AddExperience = ({ addExperience, history }) => {
           InputLabelProps={{
             shrink: true,
           }}
-          variant="outlined"
+          variant="filled"
         />
 
         </div>

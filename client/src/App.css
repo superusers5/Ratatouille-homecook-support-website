@@ -17,8 +17,11 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-image: url("img/dashfood2.jpg");
+  background-image: url("img/nice.jpg");
+  background-size: cover;
   color: #333;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 a {
