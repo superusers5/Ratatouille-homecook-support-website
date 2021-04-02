@@ -91,7 +91,7 @@ const AddExperience = ({ addExperience, history }) => {
         <TextField
           id="outlined-full-width"
           style={{ margin: 8 }}
-          placeholder="Price (INR)"
+          placeholder="* Price (INR)"
           name="location"
           value={location}
           onChange={onChange}
