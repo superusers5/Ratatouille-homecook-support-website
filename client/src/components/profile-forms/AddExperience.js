@@ -91,7 +91,7 @@ const AddExperience = ({ addExperience, history }) => {
         <TextField
           id="outlined-full-width"
           style={{ margin: 8 }}
-          placeholder="Price (INR)"
+          placeholder="* Price (INR)"
           name="location"
           value={location}
           onChange={onChange}
@@ -150,7 +150,7 @@ const AddExperience = ({ addExperience, history }) => {
         />
 
         </div>
-        <input type="submit" className="btn btn-primary my-1" />
+        <input type="submit" className="btn btn-primary my-1" value= "Submit"/>
         <Link className="btn btn-light my-1" to="/dashboard">
           Go Back
         </Link>
