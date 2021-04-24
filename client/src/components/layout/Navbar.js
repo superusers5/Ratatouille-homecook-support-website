@@ -14,9 +14,19 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
         <Link to="/posts">Foodie Forum</Link>
       </li>
       <li>
+        <Link to="/cart">
+          <i className="fas fa-shopping-cart" /> My Cart
+        </Link>
+      </li>
+      <li>
+        <Link to="/orders">
+          <i className="fas fa-concierge-bell" /> My Orders
+        </Link>
+      </li>
+      <li>
         <Link to="/dashboard">
-          <i className="fas fa-user" />{' '}
-          <span className="hide-sm">Your Shop</span>
+          <i className="fas fa-user" />
+          <span className="hide-sm"> My Shop</span>
         </Link>
       </li>
       <li>

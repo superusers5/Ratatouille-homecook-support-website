@@ -19,7 +19,7 @@ const DashboardActions = () => {
         Edit Shop Info
       </Button>
       </Link>
-      <Link to='/add-experience' >
+      <Link to='/add-dish' >
       <Button variant="outlined" color="primary">
         Add dishes
       </Button>

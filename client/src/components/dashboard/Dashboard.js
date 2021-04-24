@@ -38,7 +38,7 @@ const Dashboard = ({
           <Experience experience={profile.experience} />
           <Education education={profile.education} />
 
-          <div>
+          <div className='delete-btn'>
           <Button
           variant="contained"
           color="secondary"
