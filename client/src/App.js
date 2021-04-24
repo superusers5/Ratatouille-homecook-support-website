@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar';
 import Landing from './components/layout/Landing';
 import Routes from './components/routing/Routes';
 import { LOGOUT } from './actions/types';
+import Admin from './components/admin/Admin'
 
 // Redux
 import { Provider } from 'react-redux';
@@ -12,6 +13,13 @@ import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
 import './App.css';
+
+const RouteWithNavbar = ({exact, path, component:Component, ...rest}) => {
+  return <Route exact={exact} path={path} {...rest} render={(routeProps) => {
+     return <><Navbar {...routeProps}/> <Component {...routeProps}/></>
+  }}
+  />
+}
 
 const App = () => {
   useEffect(() => {
@@ -27,14 +35,16 @@ const App = () => {
     });
   }, []);
 
+
   return (
     <Provider store={store}>
       <Router>
         <Fragment>
-          <Navbar />
+          {/* <Navbar /> */}
           <Switch>
-            <Route exact path="/" component={Landing} />
-            <Route component={Routes} />
+            <RouteWithNavbar exact path="/" component={Landing} />
+            <Route exact path="/admin" component={Admin} /> 
+            <RouteWithNavbar component={Routes} />
           </Switch>
         </Fragment>
       </Router>
