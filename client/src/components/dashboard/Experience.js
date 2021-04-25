@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { deleteExperience } from '../../actions/profile';
+import { deleteDish } from '../../actions/dish';
 import formatDate from '../../utils/formatDate';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Experience = ({ experience, deleteExperience }) => {
+const Experience = ({ experience, deleteDish }) => {
   const classes = useStyles();
   const experiences = experience.map((exp) => (
     <tr key={exp._id}>
@@ -29,7 +29,7 @@ const Experience = ({ experience, deleteExperience }) => {
       </td> */}
       <td className="hide-sm">{exp.location}</td>
       <td>
-        <IconButton aria-label="delete"  onClick={() => deleteExperience(exp._id)}>
+        <IconButton aria-label="delete"  onClick={() => deleteDish(exp._id)}>
           <DeleteIcon style={{ color: 'white' }} />
         </IconButton>
 
@@ -57,7 +57,7 @@ const Experience = ({ experience, deleteExperience }) => {
 
 Experience.propTypes = {
   experience: PropTypes.array.isRequired,
-  deleteExperience: PropTypes.func.isRequired
+  deleteDish: PropTypes.func.isRequired
 };
 
-export default connect(null, { deleteExperience })(Experience);
+export default connect(null, { deleteDish })(Experience);

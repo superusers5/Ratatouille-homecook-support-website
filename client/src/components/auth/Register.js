@@ -64,13 +64,13 @@ const useStyles = makeStyles((theme) => ({
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const classes = useStyles();
   const [formData, setFormData] = useState({
-    name: '',
+    username: '',
     email: '',
     password: '',
     password2: '',
   });
 
-  const { name, email, password, password2 } = formData;
+  const { username, email, password, password2 } = formData;
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -80,7 +80,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     if (password !== password2) {
       setAlert('Passwords do not match', 'danger');
     } else {
-      register({ name, email, password });
+      register({ username, email, password });
     }
   };
 
@@ -106,11 +106,11 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             margin="normal"
             required
             fullWidth
-            id="name"
-            label="Name"
-            name="name"
-            autoComplete="name"
-            value={name}
+            id="username"
+            label="Username"
+            name="username"
+            autoComplete="username"
+            value={username}
             onChange={onChange}
             autoFocus
           />

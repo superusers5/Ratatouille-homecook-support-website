@@ -1,5 +1,5 @@
 {
-  "mongoURI": "mongodb+srv://GeethCharan:bruh123@ratatouille.tme6v.mongodb.net/testDatabase?retryWrites=true&w=majority",
+  "mongoURI": "mongodb+srv://GeethCharan:bruh123@ratatouille.tme6v.mongodb.net/testing456?retryWrites=true&w=majority",
   "jwtSecret": "sinzhousasageyo"
 }
 

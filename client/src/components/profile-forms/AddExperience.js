@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addExperience } from '../../actions/profile';
+import { addDish } from '../../actions/dish';
 import { makeStyles, withTheme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
@@ -32,20 +32,17 @@ textInputStyle: {
 }));
 
 
-const AddExperience = ({ addExperience, history }) => {
+const AddExperience = ({ addDish, history }) => {
   const classes = useStyles()
 
   const [formData, setFormData] = useState({
-    company: '',
-    title: '',
-    location: '',
-    from: '10',
-    to: '',
-    current: true,
-    description: ''
+    name: '',
+    description: '',
+    price: 0,
+    category: ''
   });
 
-  const { company, title, location, from, to, current, description } = formData;
+  const { name, description, price, category } = formData;
 
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -61,7 +58,7 @@ const AddExperience = ({ addExperience, history }) => {
         className="form"
         onSubmit={e => {
           e.preventDefault();
-          addExperience(formData, history);
+          addDish(formData, history);
         }}
       >
         <div>
@@ -70,8 +67,8 @@ const AddExperience = ({ addExperience, history }) => {
           id="outlined-full-width"
           style={{ margin: 8 }}
           placeholder="* Dish Name"
-          name="title"
-          value={title}
+          name="name"
+          value={name}
           onChange={onChange}
           required
           fullWidth
@@ -88,8 +85,8 @@ const AddExperience = ({ addExperience, history }) => {
           id="outlined-full-width"
           style={{ margin: 8 }}
           placeholder="* Cuisine (example: Chinese, Indian)"
-          name="company"
-          value={company}
+          name="category"
+          value={category}
           onChange={onChange}
           required
           fullWidth
@@ -106,8 +103,8 @@ const AddExperience = ({ addExperience, history }) => {
           id="outlined-full-width"
           style={{ margin: 8 }}
           placeholder="* Price (INR)"
-          name="location"
-          value={location}
+          name="price"
+          value={price}
           onChange={onChange}
           required
           fullWidth
@@ -176,7 +173,7 @@ const AddExperience = ({ addExperience, history }) => {
 };
 
 AddExperience.propTypes = {
-  addExperience: PropTypes.func.isRequired
+  addDish: PropTypes.func.isRequired
 };
 
-export default connect(null, { addExperience })(AddExperience);
+export default connect(null, { addDish })(AddExperience);
