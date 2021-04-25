@@ -15,12 +15,12 @@ const DashboardActions = () => {
   return (
     <div className={classes.root}>
       <Link to='/edit-profile' >
-      <Button variant="outlined" color="primary">
+      <Button variant="contained" color="primary">
         Edit Shop Info
       </Button>
       </Link>
       <Link to='/add-dish' >
-      <Button variant="outlined" color="primary">
+      <Button variant="contained" color="primary">
         Add dishes
       </Button>
       </Link>

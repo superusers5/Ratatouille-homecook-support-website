@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addExperience } from '../../actions/profile';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, withTheme } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 
@@ -11,11 +11,23 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
+    color: 'white'
+  },
+  input: {
+    '&::placeholder': {
+      fontcolor: 'white',
+    },
   },
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),
     width: '25ch',
+  },
+  multilineColor:{
+    color:'white'
+},
+textInputStyle: {
+  color: 'white',
   },
 }));
 
@@ -66,6 +78,7 @@ const AddExperience = ({ addExperience, history }) => {
           margin="normal"
           InputLabelProps={{
             shrink: true,
+            style: { color: 'white'},
           }}
           variant="filled"
         />
@@ -83,6 +96,7 @@ const AddExperience = ({ addExperience, history }) => {
           margin="normal"
           InputLabelProps={{
             shrink: true,
+            style: { color: 'white'},
           }}
           variant="filled"
         />
@@ -100,6 +114,7 @@ const AddExperience = ({ addExperience, history }) => {
           margin="normal"
           InputLabelProps={{
             shrink: true,
+            style: { color: 'white'},
           }}
           variant="filled"
         />
@@ -145,6 +160,7 @@ const AddExperience = ({ addExperience, history }) => {
           margin="normal"
           InputLabelProps={{
             shrink: true,
+            style: { color: 'white'},
           }}
           variant="filled"
         />

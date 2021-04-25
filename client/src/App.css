@@ -17,9 +17,9 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-image: url("img/nice.jpg");
+  background-image: url("img/croppedcut.jpg");
   background-size: cover;
-  color: #333;
+  color: white;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -308,7 +308,7 @@ button {
 }
 
 .table th {
-  background: var(--light-color);
+  background: var(--dark-color);
 }
 
 /* Navbar */
