@@ -20,6 +20,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
+import Chart2 from './Chart2';
 import Deposits from './Deposits';
 import Orders from './Orders';
 
@@ -131,8 +132,8 @@ export default function Dashboard() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
-        <Toolbar className={classes.toolbar}>
+      <AppBar position="absolute" style={{ background: '#333333' }} className={clsx(classes.appBar, open && classes.appBarShift)}>
+        <Toolbar className={classes.toolbar} >
           <IconButton
             edge="start"
             color="inherit"
@@ -189,6 +190,12 @@ export default function Dashboard() {
             <Grid item xs={12}>
               <Paper className={classes.paper}>
                 <Orders />
+              </Paper>
+            </Grid>
+            {/* Chart2 */}
+            <Grid item xs={12}>
+              <Paper className={fixedHeightPaper}>
+                <Chart2 />
               </Paper>
             </Grid>
           </Grid>
