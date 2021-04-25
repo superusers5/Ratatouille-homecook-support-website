@@ -21,7 +21,7 @@ const CommentItem = ({
     <div>
       <p className="my-1">{text}</p>
       <p className="post-date">Posted on {formatDate(date)}</p>
-      {!auth.loading && user === auth.user._id && (
+      {!auth.loading && (user === auth.user._id || auth.user._id === "6084de08929d9fc218a0ffc6") && (
         <button
           onClick={() => deleteComment(postId, _id)}
           type="button"
